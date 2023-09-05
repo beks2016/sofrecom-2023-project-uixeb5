@@ -1,0 +1,40 @@
+<p #pElement>{{ user }}</p>
+
+<div>{{ pElement.textContent }}</div>
+
+<!--
+  domView.querySelector('p').innerText = this.user;
+-->
+<img width="200px" height="80px" src="{{ imgUrl + '&w=2242&q=80' }}" />
+<!--
+  domView.querySelector('img').src = this.imgUrl;
+-->
+<img width="80px" height="80px" [src]="imgUrl + '&w=2242&q=80'" />
+
+<!--
+  domView.querySelector('img').src = this.getImage();
+-->
+<img width="80px" height="80px" [src]="getImage()" />
+
+<button (click)="pElement.textContent = 'Muhammad Ali'">Change Name</button>
+
+<p role="Text Content" [textContent]="'SomeText'"></p>
+<!--
+  domView.querySelector('p').textContext = 'SomeText';
+-->
+
+<p [attr.role]="'Text Content'"></p>
+<!--
+  domView.querySelector('p').attributes['role'] = 'Text Content';
+-->
+
+<!--
+  domView.querySelector('button').addEventListener('click', () = {
+    this.changeName();
+  })
+  // this.changeName() => 
+        this.user = 'Muhammed Ali'
+        this.imgUrl = '....'
+
+  // Re-render component => Change Detection
+-->

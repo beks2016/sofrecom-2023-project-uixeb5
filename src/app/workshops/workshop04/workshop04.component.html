@@ -1,0 +1,27 @@
+<h3>Workshop 4</h3>
+
+<app-alert-sucess *ngIf="isAdded"></app-alert-sucess>
+<app-alert-error *ngIf="isError"></app-alert-error>
+
+<!-- <app-alert [message]="message" (hide)="hideAlert()" /> -->
+
+<!-- <app-paginator [pageSize]="20" [data]="data" (page)="onPage($event)" /> -->
+
+First Name
+<input
+  type="text"
+  name="firstName"
+  [value]="defaultUser.firstName"
+  #firstName
+/>
+<br />
+Last Name
+<input type="text" name="lastName" [value]="defaultUser.lastName" #lastName />
+<br />
+Email
+<input type="text" [value]="defaultUser.email" name="email" #email />
+
+<br />
+<button (click)="addUser(firstName.value, lastName.value, email.value)">
+  Add
+</button>
