@@ -12,13 +12,11 @@ export class UserFormComponent {
     firstName: '',
     lastName: '',
     email: '',
+    id: '',
   };
 
-  addUser(firstName: string, lastName: string, email: string) {
-    this.edit.emit({
-      firstName,
-      lastName,
-      email,
-    });
+  addUser(id: string, firstName: string, lastName: string, email: string) {
+    console.log('UserFormComponent added ');
+    this.edit.emit({ id, firstName, lastName, email });
   }
 }

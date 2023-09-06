@@ -11,7 +11,6 @@ import { DataBindingComponent } from './experiments/data-binding/data-binding.co
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserComponent } from './user/user.component';
 import { UsersComponent } from './users/users.component';
-import { Workshop04Component } from './workshops/workshop04/workshop04.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +19,6 @@ import { Workshop04Component } from './workshops/workshop04/workshop04.component
     UsersComponent,
     AlertErrorComponent,
     AlertSucessComponent,
-    Workshop04Component,
     DataBindingComponent,
     InputsOutputsComponent,
     ButtonComponent,
