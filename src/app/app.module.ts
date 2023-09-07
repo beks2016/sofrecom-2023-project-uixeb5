@@ -36,6 +36,7 @@ import { UsersComponent } from './users/users.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
       {
         path: '',
