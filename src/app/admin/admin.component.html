@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>User List</h2>
+
+  <app-users [users]="users"></app-users>
+  <h2>Add User</h2>
+  <app-user-form
+    [user]="{
+      id: '1',
+      firstName: 'Salman',
+      lastName: 'Sara',
+      email: 'someemail@t.com'
+    }"
+    (edit)="onEdit($event)"
+  ></app-user-form>
+
+  <app-alert [type]="type" [text]="text"></app-alert>
+</div>
